@@ -27,3 +27,5 @@ npm i react react-dom
 npm install -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
 
 # Also updated .eslintrc "extends" (sets of rules) and "plugins" (abilities) to utilize the above, "rules" (to not use type script for now and allow console logging with a warning)
+
+# Note: Brian said that this .eslintrc.json file is basically the .eslintrc.json file he uses for all his projects at this point.

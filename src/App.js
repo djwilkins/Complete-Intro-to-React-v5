@@ -3,25 +3,13 @@ import { render } from 'react-dom'; // like destructuring but for module import
 import Pet from './Pet';
 
 const App = () => {
-  return React.createElement(
-    "div",
-    { id: "something-important" }, // any attributes go here
-    React.createElement("h1", {}, "Adopt Me!"),
-    React.createElement(Pet, {
-      name: "Luna",
-      animal: "Dog",
-      breed: "Havanese",
-    }),
-    React.createElement(Pet, {
-      name: "Scout",
-      animal: "Dog",
-      breed: "Chihuahua",
-    }),
-    React.createElement(Pet, {
-      name: "Whiskers",
-      animal: "Cat",
-      breed: "Mixed",
-    })
-  );
+    return (
+        <div>
+            <h1 id="something-important">Adopt Me!</h1>
+            <Pet name="Luna" animal="Dog" breed="Havanese" />
+            <Pet name="Scout" animal="Dog" breed="Chihuahua" />
+            <Pet name="Whiskers" animal="Cat" breed="Mixed" />
+        </div>
+    )
 };
-render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
