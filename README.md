@@ -1,31 +1,39 @@
-# adopt-me
+# Adopt Me (react intro project)
 
-# installed eslint with this command:
+See commits [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commits/) primarily and secondarily notes below.
 
-npm install -D eslint-config-prettier
+## Setting Up Tooling
 
-# installed parcel with this command
+installed eslint with this command:
 
-# Note: parcel is an alternative to webpack
+- npm install -D eslint-config-prettier
 
-npm install -D parcel-bundler
+installed parcel with this command
 
-# installed react and react-dom to install locally
+Note: parcel is an alternative to webpack
 
-# (And no longer link this in from a cdn)
+- npm install -D parcel-bundler
 
-npm i react react-dom
+installed react and react-dom to install locally
 
-# Before "Update and reconfigure Eslint for React/JSX" commit:
+(And no longer link this in from a cdn)
 
-# Installed these packages so eslint understands react/JSX
+- npm i react react-dom
 
-# (ie. doesn't think import React not used cause of JSX
+## Implementing JSX
 
-# not written to use it directly)
+Before "Update and reconfigure Eslint for React/JSX" commit:
 
-npm install -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
+Installed these packages so eslint understands react/JSX
 
-# Also updated .eslintrc "extends" (sets of rules) and "plugins" (abilities) to utilize the above, "rules" (to not use type script for now and allow console logging with a warning)
+(ie. fix so doesn't think import React not used cause of JSX not written to explicitly use React object directly.)
 
-# Note: Brian said that this .eslintrc.json file is basically the .eslintrc.json file he uses for all his projects at this point.
+- npm install -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
+
+Also updated .eslintrc "extends" (sets of rules) and "plugins" (abilities) to utilize the above, "rules" (to not use type script for now and allow console logging with a warning)
+
+Note: Brian said that this .eslintrc.json file is basically the .eslintrc.json file he uses for all his projects at this point.
+
+Brian points out that the {} expressions utilized in the Pet component (Pet.js) at this point are limited to anything that can go on the right side of an equal sign (examples: formula, function call, ternary operator/though not a normal if statement, etc.)
+
+Best I can tell, these are basically the react/JSX version of ES6 template literals.
