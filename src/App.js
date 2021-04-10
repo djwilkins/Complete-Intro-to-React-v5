@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom'; // like destructuring but for module import
-import { Pet } from './Pet';
+import Pet from './Pet';
 
 const App = () => {
   return React.createElement(
