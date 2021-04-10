@@ -8,10 +8,4 @@ export default function Pet({ name, animal, breed }) {
             <h2>{breed}</h2>
         </div>
     )
-    // Note: this is what Parcel transpiles the JSX above into:
-    // return React.createElement("div", {}, [
-    //     React.createElement("h1", {}, name),
-    //     React.createElement("h2", {}, animal),
-    //     React.createElement("h2", {}, breed),
-    // ]);
 };
