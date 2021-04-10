@@ -9,3 +9,9 @@ npm install -D eslint-config-prettier
 # Note: parcel is an alternative to webpack
 
 npm install -D parcel-bundler
+
+# installed react and react-dom to install locally
+
+# (And no longer link this in from a cdn)
+
+npm i react react-dom
