@@ -21,7 +21,7 @@ const SearchParams = () => {
                     <select id="animal" value={animal}
                     onChange={event => setAnimal(event.target.value)}>
                         <option>All</option>
-                        {ANIMALS.map(animal => <option value={animal}>{animal}</option>)}
+                        {ANIMALS.map(animal => <option key={animal} value={animal}>{animal}</option>)}
                     </select>
                 </label>
                 <button>Submit</button>
