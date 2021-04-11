@@ -37,3 +37,7 @@ Note: Brian said that this .eslintrc.json file is basically the .eslintrc.json f
 Brian points out that the {} expressions utilized in the Pet component (Pet.js) at this point are limited to anything that can go on the right side of an equal sign (examples: formula, function call, ternary operator/though not a normal if statement, etc.)
 
 Best I can tell, these are basically the react/JSX version of ES6 template literals.
+
+# Hooks
+
+useState is an example of a React Hook. Other React methods beginning with "use" are also Hooks (useEffect, useCallback, useMemo, even custom Hooks.)
