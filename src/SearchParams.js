@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const SearchParams = () => {
     const [location, setLocation] = useState("Seattle, WA");
+    // array destructuring [current state, update state]
+    // = useState(initial default value)
 
     return (
         <div className="search-params">

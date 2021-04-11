@@ -41,3 +41,16 @@ Best I can tell, these are basically the react/JSX version of ES6 template liter
 # Hooks
 
 useState is an example of a React Hook. Other React methods beginning with "use" are also Hooks (useEffect, useCallback, useMemo, even custom Hooks.)
+
+Note: Hooks should never go inside if statements or for loops.
+(This ensures that hooks are always called in a consistent order for every component render - which is required.)
+
+Along with other updates to eslintrc.json in this commit, this adds eslint rules for hooks (including enforcing the above):
+
+- npm -i -D eslint-plugin-react-hooks
+
+For eslint "rules" trailing number (ie. "no-console": 1)
+
+- 0 is turn off
+- 1 is warn
+- 2 is throw error
