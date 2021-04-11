@@ -28,7 +28,7 @@
     },
     "settings": {
         "react": {
-            "versoin": "detect"
+            "version": "detect"
         }
     }
 }

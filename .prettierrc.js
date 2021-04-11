@@ -1,4 +1,8 @@
-{} // An empty object accepts the defautl prettier configs
+module.exports = {
+    useTabs: false,
+    tabWidth: 2,
+    singleQuote: true
+}; // An empty object accepts the defautl prettier configs
 // Can add desired parameters to object (see prettier docs)
 
 // Along with creating this file,

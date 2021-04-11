@@ -3,11 +3,11 @@ import { render } from 'react-dom'; // like destructuring but for module import
 import SearchParams from './SearchParams';
 
 const App = () => {
-    return (
-        <div>
-            <h1 id="something-important">Adopt Me!</h1>
-            <SearchParams />
-        </div>
-    )
+  return (
+    <div>
+      <h1 id="something-important">Adopt Me!</h1>
+      <SearchParams />
+    </div>
+  );
 };
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById('root'));
