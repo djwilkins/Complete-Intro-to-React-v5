@@ -7,11 +7,22 @@ const SearchParams = () => {
   const [animal, AnimalDropDown] = useDropdown('Animal', 'dog', ANIMALS);
   const [breeds, setBreeds] = useState([]);
   const [breed, BreedDropDown, setBreed] = useDropdown('Breed', '', breeds);
+  const [pets, setPets] = useState([]);
   // The "breeds" array passed to the BreedDropDown as options above (see useDropdown.js)
   // is initially defined as an empty array - but is subsequently
   // Populated by the useEffect method below setting "Breeds" equal an array of breed names
   // Returned by the pet api breed method - first, for the default animal (above)
   // And again subsequently for any other chosen animal/AnimalDropdown.
+
+  async function requestPets() {
+      const { animals } = await pet.animals({
+          location,
+          breed,
+          type: animal
+      });
+
+      setPets(animals || []);
+  }
 
   useEffect(() => {
       setBreeds([]); // Restarts breeds as empty array when changing animal
@@ -34,7 +45,10 @@ const SearchParams = () => {
 
   return (
     <div className="search-params">
-      <form>
+      <form onSubmit={(e) => {
+          e.preventDefault();
+          requestPets();
+      }}>
         <label htmlFor="location">
           Location
           <input
