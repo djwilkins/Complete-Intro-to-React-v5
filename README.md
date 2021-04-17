@@ -54,3 +54,12 @@ For eslint "rules" trailing number (ie. "no-console": 1)
 - 0 is turn off
 - 1 is warn
 - 2 is throw error
+
+useEffect is another type of React Hook.
+
+See comments in SearchParam.js for explanation of implementation there.
+
+Some other notes:
+
+- An empty array [] can be passed as an effects dependencies to tell it that it should only one once (zero dependencies to trigger re-running based on state changing for.)
+- useEffect, unlike the current SearchParams.js implementation, can take/define multiple effects at once and not just one.

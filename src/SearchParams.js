@@ -14,20 +14,23 @@ const SearchParams = () => {
   // And again subsequently for any other chosen animal/AnimalDropdown.
 
   useEffect(() => {
-      setBreeds([]);
-      setBreed("");
+      setBreeds([]); // Restarts breeds as empty array when changing animal
+      setBreed(""); // Deselects breed choice when changing animal
 
-      pet.breeds(animal).then(({ breeds }) => {
-          const breedStrings = breeds.map(({ name }) => name);
+      // Adding apiBreeds as destructuring alias below
+      // Takes api returned object.breeds and assigns to variable apiBreeds
+      pet.breeds(animal).then(({ breeds: apiBreeds }) => {
+          const breedStrings = apiBreeds.map(({ name }) => name);
           setBreeds(breedStrings);
       }, console.error);
   }, [animal, setBreed, setBreeds]);
   // useEffect schedules its method to run after the component has renderered the 1st time
   // That's to not delay the user's initial load for a better experience
   // Note: useEffect replaces a number of older react component methods
-  // The dependencies pased to useEffect as the second parameter above
+  // The dependencies passed to useEffect as the second parameter above
   // Lets react now that only when any of these dependencies change
-  // Does the useEffect method need to run again.
+  // Does the useEffect method need to run again (ie. animal changing).
+  // (Reminds me a bit of a watcher in Angular)
 
   return (
     <div className="search-params">
