@@ -63,3 +63,22 @@ Some other notes:
 
 - An empty array [] can be passed as an effects dependencies to tell it that it should only one once (zero dependencies to trigger re-running based on state changing for.)
 - useEffect, unlike the current SearchParams.js implementation, can take/define multiple effects at once and not just one.
+
+useEffect and useState are the two primary React hooks you'll use.
+
+# React Builds: Dev vs Production
+
+For webpack, need to set NODE_ENV=development (or production)
+With parcel, this is done automatic based on command run.
+
+Note: Build for development environment is larger and slower.
+
+Build as its own "Strict Mode" which will provide extra warnings if using any unstable features.
+
+# React Strict Mode
+
+Requires wrapping your app in <React.StrictMode></React.StrictMode>
+
+# React Dev Tools
+
+Available extensions for Chrome and Firefox
