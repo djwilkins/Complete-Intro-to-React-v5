@@ -82,3 +82,11 @@ Requires wrapping your app in <React.StrictMode></React.StrictMode>
 # React Dev Tools
 
 Available extensions for Chrome and Firefox
+
+# Using Fallback API
+
+We installed "cross-env" so we can mock the Petfinder.com api in case their api is not working.
+
+$ npm install -D cross-env
+
+See also new "dev:mock" entry in package.json
