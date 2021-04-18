@@ -8,6 +8,9 @@ const App = () => {
   return (
       <React.StrictMode>
           <Router>
+              <header>
+                  <a href="/"><h1 id="something-important">Adopt Me!</h1></a>
+              </header>
               <Route path="/details/:id">
                   <Details />
               </Route>
