@@ -2,6 +2,7 @@ import { Component } from "react";
 import React from "react";
 import { withRouter } from "react-router-dom";
 import pet from "@frontendmasters/pet"
+import Carousel from "./Carousel";
 
 class Details extends Component {
     state = { loading: true }; // Simpler way to instantiate component state
@@ -18,10 +19,11 @@ class Details extends Component {
             return <h2>loading ...</h2>
         }
 
-        const { type, breeds, contact, description, name } = this.state;
+        const { type, breeds, contact, description, name, photos } = this.state;
 
         return (
             <div className="details">
+                <Carousel media={photos} />
                 <div>
                     <h1>{name}</h1>
                     <h2>{`${type} - ${breeds.primary} - ${contact.address.city}, ${contact.address.state}`}</h2>
