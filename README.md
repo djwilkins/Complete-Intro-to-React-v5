@@ -108,3 +108,5 @@ Class Components offer "life cycle methods"
 We're looking at componentDidMount today.
 
 It's similar to useEffect in that it runs once the component has initialized but in this case, unlike useEffect, it just ones that one time (cannot be hooked to rerun based on dependencies changing).
+
+Note: Can use "getDerivedStateFromProps" to abstract out some state logic in class component (example added in same commit as this line).

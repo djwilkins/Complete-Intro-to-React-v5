@@ -5,6 +5,14 @@ class Carousel extends Component {
         photos: [],
         active: 0
     };
+    static getDerivedStateFromProps({ media }) {
+        let photos = ["http://placecorgi.com/600/600"];
+
+        if (media.length) {
+            // Pull large photo off each photo object
+            photos = media.map(({ large }) => large);
+        }
+    }
     render() {
         const { photos, active } = this.state;
 
@@ -12,13 +20,13 @@ class Carousel extends Component {
             <di className="carousel">
                 <img src={photos[active]} alt="animal" />
                 <div>
-                    {this.props.media.map((photo, index) => (
+                    {photos.map((photo, index) => (
                         // eslint-disable-next-line (don't use this in production)
                         <img
-                          key={photo.large}
+                          key={photo}
                           onClick={this.handleIndexClick}
                           data-index={index}
-                          src={photo.large}
+                          src={photo}
                           className={index === active ? "active" : ""}
                           alt="animal thumbnail"
                         />
