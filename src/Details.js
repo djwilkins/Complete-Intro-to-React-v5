@@ -4,16 +4,8 @@ import { withRouter } from "react-router-dom";
 import pet from "@frontendmasters/pet"
 
 class Details extends Component {
-    constructor() {
-        super();
+    state = { loading: true }; // Simpler way to instantiate component state
 
-        // Create componant instance state object
-        // Once initialized, we will populate from api with more data
-        // Through this.setState - including updating "loading" to false.
-        this.state = {
-            loading: true
-        };
-    }
     async componentDidMount () {
         const res = await pet.animal(`${this.props.match.params.id}`);
         this.setState(Object.assign({loading: false }, res.animal));
