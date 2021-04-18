@@ -98,3 +98,13 @@ React Router and Reach Router are React routing library options.
 Reach Router is being wrapped back into React Router, which is popular and used by large comanies. We use React Router here.
 
 At this point, we add a second page to our previously SPA (single page application).
+
+# Class Components
+
+Note: hooks cannot be used inside of class componants
+
+Class Components offer "life cycle methods"
+
+We're looking at componentDidMount today.
+
+It's similar to useEffect in that it runs once the component has initialized but in this case, unlike useEffect, it just ones that one time (cannot be hooked to rerun based on dependencies changing).

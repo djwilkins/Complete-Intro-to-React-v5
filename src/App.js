@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom'; // like destructuring but for module import
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Details from './Details.js';
 import SearchParams from './SearchParams';
 
@@ -9,14 +9,16 @@ const App = () => {
       <React.StrictMode>
           <Router>
               <header>
-                  <a href="/"><h1 id="something-important">Adopt Me!</h1></a>
+                  <Link to="/">Adopt Me!</Link>
               </header>
-              <Route path="/details/:id">
-                  <Details />
-              </Route>
-              <Route path="/">
-                  <SearchParams />
-              </Route>
+              <Switch>
+                <Route path="/details/:id">
+                    <Details />
+                </Route>
+                <Route path="/">
+                    <SearchParams />
+                </Route>
+              </Switch>
           </Router>;
       </React.StrictMode>
   );
