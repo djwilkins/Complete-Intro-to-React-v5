@@ -8,8 +8,9 @@ export default function Pet({ name, animal, breed, media, location, id }) {
         hero = media[0].small;
     }
 
+    // Our prior update will make use of new /details route
     return (
-        <a href={`/details/${id}`} className="pet">
+        <a href={`/details/${id}`} className="pet"> 
             <div className="image-container">
                 <img src={hero} alt={name} />
             </div>

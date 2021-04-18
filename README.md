@@ -90,3 +90,11 @@ We installed "cross-env" so we can mock the Petfinder.com api in case their api 
 $ npm install -D cross-env
 
 See also new "dev:mock" entry in package.json
+
+# React Routers
+
+React Router and Reach Router are React routing library options.
+
+Reach Router is being wrapped back into React Router, which is popular and used by large comanies. We use React Router here.
+
+At this point, we add a second page to our previously SPA (single page application).
