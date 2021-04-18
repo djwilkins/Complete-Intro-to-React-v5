@@ -12,7 +12,10 @@ class Carousel extends Component {
             // Pull large photo off each photo object
             photos = media.map(({ large }) => large);
         }
+
+        return photos;
     }
+
     render() {
         const { photos, active } = this.state;
 
