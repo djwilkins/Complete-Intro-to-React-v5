@@ -118,3 +118,11 @@ This is a feature that Hooks cannot do - but Class Components can.
 Instructor mentioned that the entire time he worked at Netflix, he never used Error boundaries.
 
 More notes on this Error Boundary implementation here: https://btholt.github.io/complete-intro-to-react-v6/error-boundaries
+
+# Class Components - componentDidUpdate / Redirect component (React Router)
+
+Added componentDidUpdate method (one of the Class Component methods, pre hooks) and Redirect component to ErrorBoundary.js
+
+"componentDidUpdate is how you react to state and prop changes with class components. In this case we're reacting to the state changing. You're also passed the previous state and props in the paremeters (which we didn't need) in case you want to detect what changed.
+
+Rendering Redirect components is how you do redirects with React Router. You can also do it progamatically but I find this approach elegant." -https://btholt.github.io/complete-intro-to-react-v6/error-boundaries
