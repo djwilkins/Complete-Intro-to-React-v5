@@ -113,7 +113,7 @@ Note: Can use "getDerivedStateFromProps" to abstract out some state logic in cla
 
 # Error boundaries
 
-This is a feature that Hooks cannot do - but Class Components can.
+This is a feature that Hooks cannot do - but Class Components can (which in a related story, cannot use hooks).
 
 Instructor mentioned that the entire time he worked at Netflix, he never used Error boundaries.
 
@@ -139,3 +139,8 @@ With props, we pass down data from parent into child component. This can become 
 Context provides global state and side steps this. It achieves the same thing as Redux but its a part of React directly.
 
 Its worth avoiding using except where really needed to avoid obscuring the data flow except where really warranted (like say user data that literally every component needs to reflect in some way or something like that.)
+
+The official React docs recommend considering "composition" as an alternate to using context (inheritence) as a way to not lose the benefits of componant reusability that can get unreliable if they depend on always being nested in a specific context.
+
+See more here: https://reactjs.org/docs/context.html
+And here: https://reactjs.org/docs/composition-vs-inheritance.html

@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 import pet from "@frontendmasters/pet"
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
+import ThemeContext from "./ThemeContext";
 
 class Details extends Component {
     state = { loading: true }; // Simpler way to instantiate component state
@@ -28,7 +29,11 @@ class Details extends Component {
                 <div>
                     <h1>{name}</h1>
                     <h2>{`${type} - ${breeds.primary} - ${contact.address.city}, ${contact.address.state}`}</h2>
-                    <button>Adopt {name}</button>
+                    <ThemeContext.Consumer>
+                        {([theme]) => (
+                            <button style={{ backgroundColor: theme }}>Adopt {name}</button>
+                        )}
+                    </ThemeContext.Consumer>
                     <p>{description}</p>
                 </div>
             </div>

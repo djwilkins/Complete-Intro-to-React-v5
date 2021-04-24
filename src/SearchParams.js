@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import pet, { ANIMALS } from '@frontendmasters/pet';
 import Results from './Results';
 import useDropdown from './useDropdown';
+import ThemeContext from './ThemeContext';
 
 const SearchParams = () => {
   const [location, setLocation] = useState('Seattle, WA');
@@ -9,6 +10,7 @@ const SearchParams = () => {
   const [breeds, setBreeds] = useState([]);
   const [breed, BreedDropDown, setBreed] = useDropdown('Breed', '', breeds);
   const [pets, setPets] = useState([]);
+  const [theme] = useContext(ThemeContext); // Noticing we're pulling the current value (state) here (and choosing not to also grab the method to update state)
   // The "breeds" array passed to the BreedDropDown as options above (see useDropdown.js)
   // is initially defined as an empty array - but is subsequently
   // Populated by the useEffect method below setting "Breeds" equal an array of breed names
@@ -61,7 +63,7 @@ const SearchParams = () => {
         </label>
         <AnimalDropDown/>
         <BreedDropDown/>
-        <button>Submit</button>
+        <button style={{ backgroundColor: theme }}>Submit</button>
       </form>
       <Results pets={pets} />
     </div>
