@@ -119,10 +119,23 @@ Instructor mentioned that the entire time he worked at Netflix, he never used Er
 
 More notes on this Error Boundary implementation here: https://btholt.github.io/complete-intro-to-react-v6/error-boundaries
 
+Note: Error boundaries don't catch errors for asynchronous code. The implementation here doesn't quite work since version changes have me implementing some of this asynchronously.
+
 # Class Components - componentDidUpdate / Redirect component (React Router)
 
-Added componentDidUpdate method (one of the Class Component methods, pre hooks) and Redirect component to ErrorBoundary.js
+Added componentDidUpdate method (one of the Class Component lifecycle methods, pre hooks) and Redirect component to ErrorBoundary.js
+
+componentDidUpdate will run when props or state change. Its very similar to useEffect for hooks.
+Can checkout guides online comparing Class Component lifecycle methodsvs Hooks.
 
 "componentDidUpdate is how you react to state and prop changes with class components. In this case we're reacting to the state changing. You're also passed the previous state and props in the paremeters (which we didn't need) in case you want to detect what changed.
 
 Rendering Redirect components is how you do redirects with React Router. You can also do it progamatically but I find this approach elegant." -https://btholt.github.io/complete-intro-to-react-v6/error-boundaries
+
+# Context
+
+With props, we pass down data from parent into child component. This can become cumbersome level after level. It's good though in that its explicit and we can see fully the flow of the data.
+
+Context provides global state and side steps this. It achieves the same thing as Redux but its a part of React directly.
+
+Its worth avoiding using except where really needed to avoid obscuring the data flow except where really warranted (like say user data that literally every component needs to reflect in some way or something like that.)
