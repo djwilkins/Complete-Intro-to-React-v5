@@ -51,3 +51,6 @@ export default function DetailsErrorBoundary(props) {
         </ErrorBoundary>
     );
 }
+
+// The spread operator above "{...props}" is short hand for setting each property from props on the component
+// Like <DetailsWithRouter id={props.id} other={props.other} etc={props.etc}> but without spelling everything out.
