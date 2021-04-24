@@ -110,3 +110,11 @@ We're looking at componentDidMount today.
 It's similar to useEffect in that it runs once the component has initialized but in this case, unlike useEffect, it just ones that one time (cannot be hooked to rerun based on dependencies changing).
 
 Note: Can use "getDerivedStateFromProps" to abstract out some state logic in class component (example added in same commit as this line).
+
+# Error boundaries
+
+This is a feature that Hooks cannot do - but Class Components can.
+
+Instructor mentioned that the entire time he worked at Netflix, he never used Error boundaries.
+
+More notes on this Error Boundary implementation here: https://btholt.github.io/complete-intro-to-react-v6/error-boundaries
