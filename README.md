@@ -16,9 +16,9 @@ That very basic React is simple a [function component](https://reactjs.org/docs/
 
 ## Function Components and Props
 
-After spawing off our React js into its own App.js file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e5614e021c2a966e45d1469e24606a43f277b18c)), we then add a new **function component** called <Pet> and utilize it three times in our <App> component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fa896f4667f14b00329277e53535fb771614337e)).
+After spawing off our React js into its own App.js file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e5614e021c2a966e45d1469e24606a43f277b18c)), we then add a new **function component** called Pet and utilize it three times in our App component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fa896f4667f14b00329277e53535fb771614337e)).
 
-We then implement [props](https://reactjs.org/docs/components-and-props.html) by passing them down from our <App> componant into each <Pet> component one by one ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/4a0d7444970f30a161a94c4d4de39209f7082fe0)). 
+We then implement [props](https://reactjs.org/docs/components-and-props.html) by passing them down from our App componant into each Pet component one by one ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/4a0d7444970f30a161a94c4d4de39209f7082fe0)). 
 
 We also learn to utilize destructuring (JS ES6) in passing props to avoid redundant dot notation in our child component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e482f4e07c5efa5e20ebd752fb9509155ab036a2)).
 
@@ -42,9 +42,9 @@ And npm install React (react/react-dom) to include/package it locally, remove ou
 
 ## Spawning Pet.js and JSX Implementation
 
-We continue getting things setup more propertly by spawning the <Pet> component off into its own file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/c35cf38ef9cea0d4e96b3eb1f7f4e7ce7fdb4d89)). And implement the alternate "Default export pattern" ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/af67f6ee17a3bcd250804ac79741222fcea8ba0d)).
+We continue getting things setup more propertly by spawning the Pet component off into its own file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/c35cf38ef9cea0d4e96b3eb1f7f4e7ce7fdb4d89)). And implement the alternate "Default export pattern" ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/af67f6ee17a3bcd250804ac79741222fcea8ba0d)).
 
-And more importantly, implement [JSX](https://reactjs.org/docs/jsx-in-depth.html) syntax in both our <Pet> (Pet.js) and <App> (App.js) components ([here](([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/720c127130f1e9e8ddb7aef8f9d8ddf4f5cfbe98)) and [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e32e4da9efe11b41c3bf2e3d0da9a60b8e9ee447)).
+And more importantly, implement [JSX](https://reactjs.org/docs/jsx-in-depth.html) syntax in both our Pet (Pet.js) and App (App.js) components ([here](([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/720c127130f1e9e8ddb7aef8f9d8ddf4f5cfbe98)) and [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e32e4da9efe11b41c3bf2e3d0da9a60b8e9ee447)).
 
 We also update our Eslint congifuations to under React/JSX ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/1462d6d297e4b2b4c43cb7ade03f88dc21ba9c55)).
 
