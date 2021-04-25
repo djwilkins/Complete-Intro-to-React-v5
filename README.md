@@ -10,7 +10,7 @@ The purpose of this README will be for me to summarize what I learned during the
 
 ## Getting Started
 
-Brian begins the course rather brilliantly by giving students their first taste of REACT syntax with the quickest setup possible. As reflected in [my initial commit](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/9353ed97ffd213f27eb37a1ff68896b436f9b478), this involved pulling react in from online in a <script> tag (CDN style) and writing some very basic react in another <script> tag in index.html directly.  Not a best practice - just a nice way to moving quickly.
+Brian begins the course rather brilliantly by giving students their first taste of REACT syntax with the quickest setup possible. As reflected in [my initial commit](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/9353ed97ffd213f27eb37a1ff68896b436f9b478), this involved pulling react in from online in a <script> tag (CDN style) and writing some very basic react in another <script> tag in index.html directly.  *(Not a best practice - just a nice way to get moving quickly.)*
 
 That very basic React is simple a [function component](https://reactjs.org/docs/components-and-props.html "See Function vs Class Component distinction in official docs here") called App that returns a header element wrapped in a div element.
 
