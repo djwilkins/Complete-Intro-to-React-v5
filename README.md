@@ -12,19 +12,19 @@ The purpose of this README will be for me to summarize what I learned during the
 
 Brian begins the course rather brilliantly by giving students their first taste of REACT syntax with the quickest setup possible. As reflected in [my initial commit](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/9353ed97ffd213f27eb37a1ff68896b436f9b478), this involved pulling react in from online in a <script> tag (CDN style) and writing some very basic react in another <script> tag in index.html directly.  *(Not a best practice - just a nice way to get moving quickly.)*
 
-That very basic React is simple a [function component](https://reactjs.org/docs/components-and-props.html "See Function vs Class Component distinction in official docs here") called App that returns a header element wrapped in a div element.
+That very basic React is simply a [function component](https://reactjs.org/docs/components-and-props.html "See Function vs Class Component distinction in official docs here") called App that returns a header element wrapped in a div element.
 
 ## Function Components and Props
 
 After spawing off our React js into its own App.js file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e5614e021c2a966e45d1469e24606a43f277b18c)), we then add a new **function component** called Pet and utilize it three times in our App component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fa896f4667f14b00329277e53535fb771614337e)).
 
-We then implement [props](https://reactjs.org/docs/components-and-props.html) by passing them down from our App componant into each Pet component one by one ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/4a0d7444970f30a161a94c4d4de39209f7082fe0)). 
+We then implement [props](https://reactjs.org/docs/components-and-props.html) by passing them down from our App component into each Pet component one by one ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/4a0d7444970f30a161a94c4d4de39209f7082fe0)). 
 
-We also learn to utilize destructuring (JS ES6) in passing props to avoid redundant dot notation in our child component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e482f4e07c5efa5e20ebd752fb9509155ab036a2)).
+We also learn to utilize [destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) (JS ES6) in passing props to avoid redundant dot notation in our child component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e482f4e07c5efa5e20ebd752fb9509155ab036a2)).
 
 ## Node.js and Tooling
 
-Next we initialize our project folder with "npm init -y" so we can start managing packages in a package.json file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ab299694f4cf7e97728a98b9f3d15f5de26195a4)) and add a .gitignore to avoid commiting packages installed under node_modules to git ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/1fe82d24b7f90a7699ba62320a8e170345b621b3)).
+Next we initialize our project folder as a node project (with "npm init -y") so we can start managing packages in a package.json file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ab299694f4cf7e97728a98b9f3d15f5de26195a4)) and add a .gitignore to avoid commiting packages installed under node_modules to git ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/1fe82d24b7f90a7699ba62320a8e170345b621b3)).
 
 We npm install [prettier](https://prettier.io/), add and add some prettier configurations to our package.json ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/75dc9f80159ac12596aae12c443ef4f3bc089768)) and through a .prettierrc.js file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e7aca728e7b1073793af8ee6a1f0dd21a63444d0)).
 
@@ -36,17 +36,17 @@ Finally, we update our .gitignore to exclude additional files ([here](https://gi
 
 ## Parcel & Bundling React Locally
 
-Next we install [Parcel](https://parceljs.org/) which is an alternative to Webpack.
+Next we install [Parcel](https://parceljs.org/) which is an alternative to [Webpack](https://webpack.js.org/).
 
 And npm install React (react/react-dom) to include/package it locally, remove our CDN links of it from before and import it from local packages instead ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/72d0f99325fbd50aa5d3749e3328bef12dc4a060))
 
 ## Spawning Pet.js and JSX Implementation
 
-We continue getting things setup more propertly by spawning the Pet component off into its own file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/c35cf38ef9cea0d4e96b3eb1f7f4e7ce7fdb4d89)). And implement the alternate "Default export pattern" ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/af67f6ee17a3bcd250804ac79741222fcea8ba0d)).
+We continue refactoring by spawning the Pet component off into its own file ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/c35cf38ef9cea0d4e96b3eb1f7f4e7ce7fdb4d89)). And implement the alternate "Default export pattern" with it ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/af67f6ee17a3bcd250804ac79741222fcea8ba0d)).
 
-And more importantly, implement [JSX](https://reactjs.org/docs/jsx-in-depth.html) syntax in both our Pet (Pet.js) and App (App.js) components ([here](([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/720c127130f1e9e8ddb7aef8f9d8ddf4f5cfbe98)) and [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e32e4da9efe11b41c3bf2e3d0da9a60b8e9ee447)).
+More importantly, we next implement [JSX](https://reactjs.org/docs/jsx-in-depth.html) syntax in both our Pet (Pet.js) and App (App.js) components ([here](([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/720c127130f1e9e8ddb7aef8f9d8ddf4f5cfbe98)) and [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e32e4da9efe11b41c3bf2e3d0da9a60b8e9ee447)).
 
-We also update our Eslint congifuations to under React/JSX ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/1462d6d297e4b2b4c43cb7ade03f88dc21ba9c55)).
+We also update our Eslint congifuations to understand React/JSX ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/1462d6d297e4b2b4c43cb7ade03f88dc21ba9c55)).
 
 ## SearchParams Component and useState Hook
 
