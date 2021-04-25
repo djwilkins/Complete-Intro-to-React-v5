@@ -144,3 +144,13 @@ The official React docs recommend considering "composition" as an alternate to u
 
 See more here: https://reactjs.org/docs/context.html
 And here: https://reactjs.org/docs/composition-vs-inheritance.html
+
+# Portals
+
+"Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component." -https://reactjs.org/docs/portals.html
+
+See more on usage and syntax at official docs above.
+
+Regarding the use of the userRef hook for our Portal implementation in Modal.js, this explanation from the course docs is helpful:
+"We're also using a ref here via the hook useRef. Refs are like instance variables for function components. Whereas on a class you'd say this.myVar to refer to an instance variable, with function components you can use refs. They're containers of state that live outside a function's closure state which means anytime I refer to elRef.current, it's always referring to the same element. This is different from a useState call because the variable returned from that useState call will always refer to the state of the variable when that function was called. It seems like a weird hair to split but it's important when you have async calls and effects because that variable can change and nearly always you want the useState variable, but with something like a portal it's important we always refer to the same DOM div; we don't want a lot of portals."
+https://btholt.github.io/complete-intro-to-react-v6/portals-and-refs

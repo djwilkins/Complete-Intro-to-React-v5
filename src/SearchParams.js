@@ -43,7 +43,7 @@ const SearchParams = () => {
   // That's to not delay the user's initial load for a better experience
   // Note: useEffect replaces a number of older react component methods
   // The dependencies passed to useEffect as the second parameter above
-  // Lets react now that only when any of these dependencies change
+  // Lets react know that only when any of these dependencies change
   // Does the useEffect method need to run again (ie. animal changing).
   // (Reminds me a bit of a watcher in Angular)
 

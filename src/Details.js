@@ -1,18 +1,21 @@
-import { Component } from "react";
-import React from "react";
+import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import Modal from './Modal';
 import pet from "@frontendmasters/pet"
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
 
 class Details extends Component {
-    state = { loading: true }; // Simpler way to instantiate component state
+    state = { loading: true, showModal: false }; // Simpler way to instantiate component state
 
     async componentDidMount () {
         const res = await pet.animal(`${this.props.match.params.id}`);
-        this.setState(Object.assign({loading: false }, res.animal));
+        this.setState(Object.assign({loading: false, showModal: false }, res.animal));
     }
+
+    toggleModal = () => this.setState({ showModal: !this.state.showModal });
+    adopt = () => (window.location = "http://bit.ly/pet-adopt");
 
     render() {
         console.log(this.state);
@@ -21,7 +24,7 @@ class Details extends Component {
             return <h2>loading ...</h2>
         }
 
-        const { type, breeds, contact, description, name, photos } = this.state;
+        const { type, breeds, contact, description, name, photos, showModal } = this.state;
 
         return (
             <div className="details">
@@ -31,13 +34,30 @@ class Details extends Component {
                     <h2>{`${type} - ${breeds.primary} - ${contact.address.city}, ${contact.address.state}`}</h2>
                     <ThemeContext.Consumer>
                         {([theme]) => (
-                            <button style={{ backgroundColor: theme }}>Adopt {name}</button>
+                            <button onClick={this.toggleModal} style={{ backgroundColor: theme }}>Adopt {name}</button>
                         )}
                     </ThemeContext.Consumer>
                     <p>{description}</p>
+                    {
+                        showModal ? (
+                            <Modal>
+                                <div>
+                                    <h1>Would you like to adopt {name}?</h1>
+                                    <div className="buttons">
+                                        <button onClick={this.adopt}>Yes</button>
+                                        <button onClick={this.toggleModal}>No</button>
+                                    </div>
+                                </div>
+                            </Modal>
+                        ) : null
+                    }
                 </div>
             </div>
         )
+        // "Notice that despite [of us] rendering a whole different part of the DOM we're still referencing the state in Details.js.
+        // This is the magic of Portals. You can use state but render in different parts of the DOM.
+        // Imagine a sidebar with contextual navigation. Or a contextual footer. It opens up a lot of cool possibilities."
+        // -https://btholt.github.io/complete-intro-to-react-v6/portals-and-refs
 
     }
 }
