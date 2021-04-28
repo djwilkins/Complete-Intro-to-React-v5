@@ -6,7 +6,7 @@ The official repo for the course is available [here](https://github.com/btholt/c
 
 ## Purpose
 
-The purpose of this README will be for me to summarize what I learned during the course to help cement my learning and for ease of future reference.
+The purpose of this README will be for me to summarize what I learned during the course to help cement my learning and for ease of future reference.  (I've moved my original README.md content of notes taking during the course to [here](./NOTES.md).)
 
 ## Getting Started
 
@@ -50,4 +50,7 @@ We also update our Eslint congifuations to understand React/JSX ([here](https://
 
 ## SearchParams Component and useState Hook
 
-<u>**PICKUP ON SUMMARIZING COMMITS HERE**</u>
+Next we added a new SearchParams component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/4e776274cba08a0c2cb47356ffd57683460dda7e)) and implemeneted managing it's input element value's sate with the useState Hook ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ef6ad751e6644b0bfd24263bc9ff380fa2202910)).
+
+We updated our eslint configurations to include React Hook rules and I captured some Hook usage comments [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/bbbbd751178a663ecb5a215d3cc0e0f6463771a0).
+
