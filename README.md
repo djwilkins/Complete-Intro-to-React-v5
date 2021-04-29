@@ -6,7 +6,7 @@ The official repo for the course is available [here](https://github.com/btholt/c
 
 ## Purpose
 
-The purpose of this README will be for me to summarize what I learned during the course to help cement my learning and for ease of future reference.  (I've moved my original README.md content of notes taking during the course to [here](./NOTES.md).)
+The purpose of this README will be for me to summarize what I learned during the course to help cement my learning and for ease of future reference.  (*I've moved my original README.md content of notes taking during the course to [here](./NOTES.md).*)
 
 ## Getting Started
 
@@ -54,3 +54,28 @@ Next we added a new SearchParams component ([here](https://github.com/djwilkins/
 
 We updated our eslint configurations to include React Hook rules and I captured some Hook usage comments [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/bbbbd751178a663ecb5a215d3cc0e0f6463771a0).
 
+## Pet API
+
+Next we install the Frontend Masters Pet API package and import it's ANIMALS array in our SearchParams component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/4e44eb0601674685c4b04824d9c0b150e81e204f)) and then add a new select element to our SearchParams form for animal, populate its options with ANIMALS.map and track the animal selected with a new useState value ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ba5737ce8821fa39986cb5a12a4f51c751873ba9)).
+
+WIth React, "Each child in a list should have a unique 'key' prop" and we address this with a "key" attribute [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ab1750b3e24d32f9b805b35d51af709e7c883370). (*Similar to angularjs requiring a unique id for elements spawned from an array with ng-repeat.*) 
+
+## Breed and Custom Dropdown Hook
+
+Next we expand our SearchParams component with useState hooks for two more values (breed and breeds) and add a new form select element for choosing the breed from breeds [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/61699b0c6e1ec4d19526ef9cf0665c5e1612b27f#diff-a1c641477cd8005d163fd088b5c4e46462256c97e58fada1e42d44ab4b823c28). (We will be loading "breeds" from the api per another update.)
+
+But first, we create a **<u>custom Hook</u>** called useDropdown that abstracts the common facets of our animal and breed dropdowns and utilizes that new dropdown to refactor/simplify our SearchParmams component code ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/5cf5b2189220a3aa66fd7a263ae7a9a1e06d22a0))
+
+## useEffect Hook
+
+We further expand our SearchParams component with a useEffect hook, which is a hook that runs after the component has rendererd the 1st time. This hook provides for functional components (like our SearchParams) what used to only be available in React through class component methods.
+
+We start with a simple implementation [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/011570c295e53dbdc049c9024552cdd279af08a4) that pulls the breeds from the Frontend Masters pet api for our default anamal ("dogs") and writes the result to the console.  We then update [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/4d21aee2c5d421a52ab90ba7a546b02027f20737) to (1) reset breed/breeds to nothing, (2) populate the breeds (dropdown options) based on the current animal (api returns) and (3) rerun each time animal changes.
+
+(We also update our destructuring of animal breeds from the api to be referred to with the alias apiBreeds to distinguish from our state tracked value of the same name [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/941431b8cb9455ef3f292ddb5dbb7a649b0c4289).
+
+## React Strict Mode, Dev v. Prod Builds and Dev Tools
+
+We implement React Strict mode by wrapping our App component returns in a special React.StrictMode component and also discuss differences between dev and production builds using Parcel vs Webpack and finally, the availability/value of React Dev Tools for Chrome and Firefox is mentioned (all [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/f5d11c459253ec51fbb05bbe9691e55fc2ea6d18)).
+
+*NEXT COMMIT IS "Implement Async Function"*
