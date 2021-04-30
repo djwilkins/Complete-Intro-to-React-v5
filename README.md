@@ -112,5 +112,38 @@ Next, we create our second class component, a new Carousel component for switchi
 
 And then utilize the React class component lifecycle method [getDerivedStateFromProps](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) to simplify logic for passing/handling image data in our Carousel class component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/b281d29ea63721934a11d7539413b1da2bf61bc8) and [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/8e67e01a26e325b4ff78223962146e971826e33b)).
 
-Next, we add the click event handler method (handleIndexClick) for updating the index of the current image of the Carousel component (called per each image's onClick attribute) ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/blob/main/src/Carousel.js)) and complete the overall implementation with some typo fixes [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fef430f33e0e7183784efff44327e5e73502fed2).
+*(NOTE: Life cycle methods are for Class Components what Hooks are for Function Components. Each is mutually exclusive.)*
 
+Next, we add the click event handler method (handleIndexClick) for updating the index of the current image of the Carousel component and learn how to avoid losing the component's this context in this situation ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/blob/main/src/Carousel.js)).
+
+Finally, I wrap up the Carousel class component implementation with some needed typo fixes [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fef430f33e0e7183784efff44327e5e73502fed2).
+
+## Error Boundaries and Other Class Component Lifecycle Methods
+
+We learn to utilize React's Error Boundaries feature as an error handling workflow and look at utilizing a number of its other class component lifecycle methods ([componentDidCatch](componentDidCatch), [componentDidUpdate](componentDidCatch)) by creating a new ErrorBoundary class component [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/db0c6b14b502657b5a6d5705afc79413a25babd5) and [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/1ab52f1ec3633b4e73ab87b4ff6f40f24785ab2f).
+
+*Note: I saw some issues getting this to work quite right with the differences between v5 and v6 of this tutorial.*
+
+*Note: The componentDidUpdate lifecycle method is for class components what the useEffect hook is for functional components.*
+
+## Context - Implementing a Theme Context
+
+Context in React is a way to define global state (it effectively replaces Redux with a native React solution).  A good thing about React in general is that most everything is explicit and we can see the flow of data each step of the way.  This can be cumbersome though with things like styles where we're passing the style prop down from parent to child Component layer after layer after layer.
+
+It's just such a use case that we implement React Contexts for a style theme initial structure [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/feafc240de28d2f28b4326ba7eb21f8d97824abb) add a button style to it [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ac39a7a9d3e4f560a739c27d7f1af0e31d6965c3)
+
+It's noted that its worth avoiding this wherever possible. The official React docs themselves recommend considering "composition" as an alterate to using context (inheritance) so as not to lose the benefits of component reusability / modularity by having a component always depend on being nested in a specific context.
+
+Finally, we add a new dropdown to our SearchParams component to allow the user to dynamically set the button style color in our Theme Context through the UI [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/aedc0af5f9a6261861d32ab409f9c46fc5ff2361).
+
+ ## Portals and useRef - Implement Modal
+
+And last but not lease, we use React's [Portals](https://reactjs.org/docs/portals.html) feature and [useRef](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/71eb89702bb1ad43eae1821f29618af28fe39547) hook to implement a Modal [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/71eb89702bb1ad43eae1821f29618af28fe39547).
+
+Portals allow us to render children into a DOM node outside of the root DOM note we're mounting our App component to.  And useRef is described here as being like instance variables in a class (or class component) but for functional components.
+
+See the commit comments and official docs for more info.
+
+## Summary
+
+With this, the instructor says we've gone over the majority of what is generally useful and utilized from the React library.  The notes for his supplemental Intermediate React course are also available at the v5 and v6 course doc links up top.
