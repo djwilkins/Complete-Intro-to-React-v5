@@ -78,4 +78,39 @@ We start with a simple implementation [here](https://github.com/djwilkins/Comple
 
 We implement React Strict mode by wrapping our App component returns in a special React.StrictMode component and also discuss differences between dev and production builds using Parcel vs Webpack and finally, the availability/value of React Dev Tools for Chrome and Firefox is mentioned (all [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/f5d11c459253ec51fbb05bbe9691e55fc2ea6d18)).
 
-*NEXT COMMIT IS "Implement Async Function"*
+## API with Async and Mock Data
+
+Next, we create an async function in our SearchParams component that API requests all the animals that match the current search params and that updates the value of "animals" in state on receive of the data ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/de5ee0c26689e8745eff65f99bc72d5eb6c3995f#diff-a1c641477cd8005d163fd088b5c4e46462256c97e58fada1e42d44ab4b823c28)).
+
+In the same commit, we also update package.json so that babel knows not to worry about converting our code and particularly async for older browsers.
+
+Next, we npm install cross-env and update our package.json with a new option to build/serve out our project using mock api data in the case the real api becomes unavailable ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e1077965c009ecd185c43e213403cc64a45dc27b)).
+
+## Add Results Component (SearchParams and Pet Components go between)
+
+Next, we add a new Results component that SearchParams can pass the list of pets from the API to ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/5a7c9bdc263fc543fdb4a3aeb7664e0f32ea6fc1)). This component stands as an intermediary between the SearchParams and the Pet component, handling some search result logic specifically therein.
+
+## Improve Pet Component
+
+Next we improve the Pet component structure and include an image from the api results (where available) [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ec9a4c326707e68690945d2172a34510fe3be7be).
+
+## React Router and New Details Component & Page
+
+Next, we implement <u>React Router</u> to include a second page in our SPA (Single Page Application): A details page for each pet ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/2fbf0569572eabcc081d0fd03d745b95832f2d21)). In doing so, we define the routes in our App component and add a link to a pet's details page from the Pet component.
+
+We also learn a nifty debugging trick for printing a component's props on the page ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/f01c45ea6895aa8728210a42a0b85c2315939d70)).  And restore the header home page linke ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/46a21248bde7f7b1fec8de0be03791e1f0741b14)).
+
+## Class Components - Refactor Details as Class Component
+
+Next, we refactor our Details functional component into our first **class component** ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/17faadcc321668496ef55fe862fd75e5ef343245)). At the same time, I do some cleanup from using React Router (v6 of tutorial) instead of Reach Router (from the v5) as in current available tutorial.
+
+We then learn we can simplify initializing the Details class components initial state without using a constructor method ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fa73fdbc472c82d14f169c883bdba485bfa0c534)).
+
+## Class Components - Create new Carousel Class Component
+
+Next, we create our second class component, a new Carousel component for switching through a pet's avaialble images ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/7576d7efeb3a5e1804cec0cf44204914728425b1)).
+
+And then utilize the React class component lifecycle method [getDerivedStateFromProps](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) to simplify logic for passing/handling image data in our Carousel class component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/b281d29ea63721934a11d7539413b1da2bf61bc8) and [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/8e67e01a26e325b4ff78223962146e971826e33b)).
+
+Next, we add the click event handler method (handleIndexClick) for updating the index of the current image of the Carousel component (called per each image's onClick attribute) ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/blob/main/src/Carousel.js)) and complete the overall implementation with some typo fixes [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fef430f33e0e7183784efff44327e5e73502fed2).
+
