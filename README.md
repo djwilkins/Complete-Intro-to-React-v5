@@ -8,7 +8,7 @@ The official repo for the course is available [here](https://github.com/btholt/c
 
 The purpose of this README will be for me to summarize what I learned during the course to help cement my learning and for ease of future reference.  (*I've moved my original README.md content of notes taking during the course to [here](./NOTES.md).*)
 
-
+----
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ Brian begins the course rather brilliantly by giving students their first taste 
 
 That very basic React is simply a [function component](https://reactjs.org/docs/components-and-props.html "See Function vs Class Component distinction in official docs here") called App that returns a header element wrapped in a div element.
 
-
+---
 
 ## Function Components and Props
 
@@ -26,7 +26,7 @@ We then implement [props](https://reactjs.org/docs/components-and-props.html) by
 
 We also learn to utilize [destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) (JS ES6) in passing props to avoid redundant dot notation in our child component ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e482f4e07c5efa5e20ebd752fb9509155ab036a2)).
 
-
+---
 
 ## Node.js and Tooling
 
@@ -40,7 +40,7 @@ Why both? Prettier is more concerned with generic things like spacing where as E
 
 Finally, we update our .gitignore to exclude additional files ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/a562a3079a72b91301b49b369241c2d73caa315f)).
 
-
+---
 
 ## Parcel & Bundling React Locally
 
@@ -48,7 +48,7 @@ Next we install [Parcel](https://parceljs.org/) which is an alternative to [Webp
 
 And npm install React (react/react-dom) to include/package it locally, remove our CDN links of it from before and import it from local packages instead ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/72d0f99325fbd50aa5d3749e3328bef12dc4a060))
 
-
+---
 
 ## Spawning Pet.js and JSX Implementation
 
@@ -58,7 +58,7 @@ More importantly, we next implement [JSX](https://reactjs.org/docs/jsx-in-depth.
 
 We also update our Eslint congifuations to understand React/JSX ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/1462d6d297e4b2b4c43cb7ade03f88dc21ba9c55)).
 
-
+---
 
 ## SearchParams Component and useState Hook
 
@@ -66,7 +66,7 @@ Next we added a new SearchParams component ([here](https://github.com/djwilkins/
 
 We updated our eslint configurations to include React Hook rules and I captured some Hook usage comments [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/bbbbd751178a663ecb5a215d3cc0e0f6463771a0).
 
-
+---
 
 ## Pet API
 
@@ -74,7 +74,7 @@ Next we install the Frontend Masters Pet API package and import it's ANIMALS arr
 
 WIth React, "Each child in a list should have a unique 'key' prop" and we address this with a "key" attribute [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ab1750b3e24d32f9b805b35d51af709e7c883370). (*Similar to angularjs requiring a unique id for elements spawned from an array with ng-repeat.*) 
 
-
+---
 
 ## Breed and Custom Dropdown Hook
 
@@ -82,7 +82,7 @@ Next we expand our SearchParams component with useState hooks for two more value
 
 But first, we create a **<u>custom Hook</u>** called useDropdown that abstracts the common facets of our animal and breed dropdowns and utilizes that new dropdown to refactor/simplify our SearchParmams component code ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/5cf5b2189220a3aa66fd7a263ae7a9a1e06d22a0))
 
-
+---
 
 ## useEffect Hook
 
@@ -92,13 +92,13 @@ We start with a simple implementation [here](https://github.com/djwilkins/Comple
 
 (We also update our destructuring of animal breeds from the api to be referred to with the alias apiBreeds to distinguish from our state tracked value of the same name [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/941431b8cb9455ef3f292ddb5dbb7a649b0c4289).
 
-
+---
 
 ## React Strict Mode, Dev v. Prod Builds and Dev Tools
 
 We implement React Strict mode by wrapping our App component returns in a special React.StrictMode component and also discuss differences between dev and production builds using Parcel vs Webpack and finally, the availability/value of React Dev Tools for Chrome and Firefox is mentioned (all [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/f5d11c459253ec51fbb05bbe9691e55fc2ea6d18)).
 
-
+---
 
 ## API with Async and Mock Data
 
@@ -108,19 +108,19 @@ In the same commit, we also update package.json so that babel knows not to worry
 
 Next, we npm install cross-env and update our package.json with a new option to build/serve out our project using mock api data in the case the real api becomes unavailable ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/e1077965c009ecd185c43e213403cc64a45dc27b)).
 
-
+---
 
 ## Add Results Component (SearchParams and Pet Components go between)
 
 Next, we add a new Results component that SearchParams can pass the list of pets from the API to ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/5a7c9bdc263fc543fdb4a3aeb7664e0f32ea6fc1)). This component stands as an intermediary between the SearchParams and the Pet component, handling some search result logic specifically therein.
 
-
+---
 
 ## Improve Pet Component
 
 Next we improve the Pet component structure and include an image from the api results (where available) [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/ec9a4c326707e68690945d2172a34510fe3be7be).
 
-
+---
 
 ## React Router and New Details Component & Page
 
@@ -128,7 +128,7 @@ Next, we implement <u>React Router</u> to include a second page in our SPA (Sing
 
 We also learn a nifty debugging trick for printing a component's props on the page ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/f01c45ea6895aa8728210a42a0b85c2315939d70)).  And restore the header home page linke ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/46a21248bde7f7b1fec8de0be03791e1f0741b14)).
 
-
+---
 
 ## Class Components - Refactor Details as Class Component
 
@@ -136,7 +136,7 @@ Next, we refactor our Details functional component into our first **class compon
 
 We then learn we can simplify initializing the Details class components initial state without using a constructor method ([here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fa73fdbc472c82d14f169c883bdba485bfa0c534)).
 
-
+---
 
 ## Class Components - Create new Carousel Class Component
 
@@ -150,7 +150,7 @@ Next, we add the click event handler method (handleIndexClick) for updating the 
 
 Finally, I wrap up the Carousel class component implementation with some needed typo fixes [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/fef430f33e0e7183784efff44327e5e73502fed2).
 
-
+---
 
 ## Error Boundaries and Other Class Component Lifecycle Methods
 
@@ -160,7 +160,7 @@ We learn to utilize React's Error Boundaries feature as an error handling workfl
 
 *Note: The componentDidUpdate lifecycle method is for class components what the useEffect hook is for functional components.*
 
-
+---
 
 ## Context - Implementing a Theme Context
 
@@ -172,7 +172,7 @@ It's noted that its worth avoiding this wherever possible. The official React do
 
 Finally, we add a new dropdown to our SearchParams component to allow the user to dynamically set the button style color in our Theme Context through the UI [here](https://github.com/djwilkins/Complete-Intro-to-React-v5/commit/aedc0af5f9a6261861d32ab409f9c46fc5ff2361).
 
-
+---
 
  ## Portals and useRef - Implement Modal
 
@@ -182,7 +182,7 @@ Portals allow us to render children into a DOM node outside of the root DOM note
 
 See the commit comments and official docs for more info.
 
-
+---
 
 ## Summary
 
